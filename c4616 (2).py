@@ -18,11 +18,7 @@ st.title("🚗 Car Evaluation Classifier using Random Forest & Streamlit")
 st.write("Predict the car condition using Machine Learning based on various features.")
 st.markdown(" *Made by: Vishal*")
 
-# File uploader
-uploaded_file = st.file_uploader("📁 Upload your car.csv file", type=['csv'])
-
-if uploaded_file is not None:
-    df = pd.read_csv("car.csv")
+df = pd.read_csv("car.csv")
 
     st.subheader("🔍 Dataset Preview")
     st.dataframe(df.head())
